@@ -1,0 +1,2351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sufyan Mirza | Lead IT Business & Technology Analyst</title>
+
+  <!-- Professional Hex-Shield Monogram Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%230b1220'/><stop offset='100%25' stop-color='%231e3a8a'/></linearGradient><linearGradient id='txt' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ffffff'/><stop offset='100%25' stop-color='%2338bdf8'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)' stroke='%2338bdf8' stroke-width='2'/><text x='27' y='42' font-family='system-ui, -apple-system, sans-serif' font-size='25' font-weight='900' fill='url(%23txt)' text-anchor='middle' letter-spacing='-1.5'>SM</text><path d='M39 23 L45 17 L48 20 L55 13' stroke='%23f59e0b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M49 13 H55 V19' stroke='%23f59e0b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>" />
+
+  <!-- Modern Executive Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Noto+Naskh+Arabic:wght@600;700&family=Noto+Sans+Devanagari:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-muted: #f1f5f9;
+      --primary-navy: #0f172a;
+      --primary-blue: #1d4ed8;
+      --accent-azure: #0284c7;
+      --accent-gold: #d97706;
+      --accent-emerald: #059669;
+      --color-linkedin: #0a66c2;
+      
+      --text-heading: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      
+      --border-light: #e2e8f0;
+      --border-accent: #cbd5e1;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.07);
+      --shadow-lg: 0 12px 30px -4px rgba(15, 23, 42, 0.1);
+      
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 75px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-grid-pattern {
+      position: fixed;
+      inset: 0;
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .custom-brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+      z-index: 1002;
+    }
+
+    .logo-emblem-svg {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .custom-brand-logo:hover .logo-emblem-svg {
+      transform: translateY(-1px) scale(1.03);
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-full-name {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.12rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--primary-navy);
+      text-transform: uppercase;
+    }
+
+    .brand-full-name span {
+      color: var(--primary-blue);
+    }
+
+    .brand-designation {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--accent-azure);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 1.1rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-link {
+      color: var(--text-body);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--primary-blue);
+    }
+
+    .nav-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .btn-contact {
+      background: var(--primary-navy);
+      color: #ffffff;
+      padding: 0.42rem 0.72rem;
+      border-radius: 7px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      transition: var(--transition);
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.12);
+    }
+
+    .btn-contact:hover {
+      background: var(--primary-blue);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-phone {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: var(--primary-blue);
+    }
+
+    .btn-phone:hover {
+      background: var(--primary-blue);
+      color: #ffffff;
+    }
+
+    .btn-linkedin-header {
+      background: var(--color-linkedin);
+      color: #ffffff;
+    }
+
+    .btn-linkedin-header:hover {
+      background: #084e96;
+      box-shadow: 0 4px 14px rgba(10, 102, 194, 0.35);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 7px 9px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--primary-navy);
+      z-index: 1002;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .mobile-menu-toggle:hover {
+      background: var(--bg-muted);
+      border-color: var(--primary-blue);
+    }
+
+    .mobile-menu-toggle svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 2;
+    }
+
+    main {
+      position: relative;
+      z-index: 10;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem 5rem;
+    }
+
+    /* Hero Layout */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.28fr 0.82fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .achievement-beam-wrap {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+      border-radius: 14px;
+      padding: 2px;
+      overflow: hidden;
+      margin-bottom: 1.1rem;
+      box-shadow: 0 4px 18px rgba(217, 119, 6, 0.15);
+      transition: var(--transition);
+    }
+
+    .achievement-beam-wrap:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(217, 119, 6, 0.28);
+    }
+
+    .achievement-beam-wrap::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        transparent 0deg,
+        transparent 60deg,
+        #f59e0b 120deg,
+        #fde68a 160deg,
+        #d97706 180deg,
+        transparent 240deg,
+        transparent 360deg
+      );
+      animation: rotateBeam 4s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes rotateBeam {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .achievement-inner {
+      position: relative;
+      z-index: 2;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 0.55rem 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .achievement-icon-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+      box-shadow: 0 2px 7px rgba(217, 119, 6, 0.35);
+      animation: floatIcon 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatIcon {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    .achievement-icon-circle svg {
+      width: 16px;
+      height: 16px;
+      fill: #ffffff;
+    }
+
+    .achievement-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .achievement-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #b45309;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .achievement-pill-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #f59e0b;
+      box-shadow: 0 0 6px #f59e0b;
+    }
+
+    .achievement-headline {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1e293b;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .achievement-dept {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #b45309;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4.5vw, 3.15rem);
+      line-height: 1.15;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.035em;
+      margin-bottom: 1.05rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--primary-navy) 20%, var(--primary-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      color: var(--text-body);
+      font-size: clamp(0.92rem, 1.8vw, 1.02rem);
+      line-height: 1.65;
+      margin-bottom: 1.3rem;
+      max-width: 580px;
+    }
+
+    .hero-contact-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 0.42rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .contact-chip:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-chip svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--primary-blue);
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 0.72rem 1.55rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #1e40af;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      border: 1px solid var(--border-accent);
+      color: var(--text-heading);
+      padding: 0.72rem 1.55rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+    }
+
+    /* Executive Portrait Box */
+    .portrait-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .portrait-box {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      height: 450px;
+      border-radius: 24px;
+      padding: 10px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+    }
+
+    .portrait-box:hover {
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12), 0 0 0 3px rgba(29, 78, 216, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .portrait-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #e2e8f0;
+      position: relative;
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 10%;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .portrait-box:hover .portrait-img {
+      transform: scale(1.03);
+    }
+
+    .portrait-caption {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .caption-name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--text-heading);
+    }
+
+    .caption-role {
+      font-size: 0.78rem;
+      color: var(--accent-azure);
+      font-weight: 600;
+    }
+
+    /* Key Metrics Ribbon */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 4rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .metric-cell h4 {
+      font-family: var(--font-display);
+      font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--primary-blue);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .metric-cell p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Global Footprint Section */
+    .global-footprint-section {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 20px;
+      padding: 2.2rem 2rem;
+      margin-bottom: 4.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .global-section-head {
+      margin-bottom: 1.5rem;
+    }
+
+    .global-meta-tag {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .global-main-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.35rem;
+    }
+
+    .global-subtitle {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      max-width: 820px;
+      line-height: 1.6;
+    }
+
+    .compact-exposure-box {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 18px;
+      padding: 1.6rem 1.8rem;
+      color: var(--text-body);
+      border: 1.5px solid #dbeafe;
+      box-shadow: 0 12px 30px -8px rgba(37, 99, 235, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      position: relative;
+    }
+
+    .embedded-tabs-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      padding: 0.45rem;
+      background: #f1f5f9;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-pill-btn {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      color: #475569;
+      padding: 0.55rem 1.15rem;
+      border-radius: 9px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      transition: all 0.22s ease;
+      font-family: var(--font-body);
+      outline: none;
+      letter-spacing: -0.01em;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-emblem {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      background: #f8fafc;
+      color: var(--primary-blue);
+      border: 1px solid #bfdbfe;
+      transition: all 0.22s ease;
+    }
+
+    .tab-pill-btn:hover {
+      color: var(--primary-blue);
+      background: #ffffff;
+      border-color: #93c5fd;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+    }
+
+    .tab-pill-btn.active {
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+      color: #ffffff;
+      border-color: #1d4ed8;
+      box-shadow: 0 4px 16px rgba(29, 78, 216, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .tab-pill-btn.active .tab-emblem {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .detail-view {
+      display: none;
+      animation: fadeInDetail 0.25s ease-in-out forwards;
+      position: relative;
+      z-index: 2;
+    }
+
+    .detail-view.active {
+      display: block;
+    }
+
+    @keyframes fadeInDetail {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .detail-header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border-light);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .detail-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.02em;
+    }
+
+    .detail-scope-tag {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: var(--primary-blue);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    .detail-columns {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .detail-desc {
+      color: var(--text-body);
+      font-size: 0.93rem;
+      line-height: 1.68;
+      margin-bottom: 1.1rem;
+    }
+
+    .detail-points-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .detail-points-list li {
+      color: #334155;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .detail-points-list li span {
+      color: var(--primary-blue);
+      font-weight: 800;
+    }
+
+    .detail-metrics-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.3rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-metrics-heading {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .detail-pill-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .detail-pill-item {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 0.32rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: var(--text-heading);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Roles Ribbon */
+    .roles-carousel {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 1.6rem 2rem;
+      margin-bottom: 5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .roles-title {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      display: block;
+    }
+
+    .roles-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .role-badge {
+      background: var(--bg-muted);
+      border: 1px solid var(--border-light);
+      color: var(--text-heading);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 0.4rem 0.9rem;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .role-badge:hover {
+      background: #ffffff;
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .role-badge::before {
+      content: '•';
+      color: var(--primary-blue);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* Section Headings */
+    section {
+      margin-bottom: 5rem;
+    }
+
+    .section-header {
+      margin-bottom: 2.3rem;
+    }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.03em;
+    }
+
+    /* Government Initiatives Cards */
+    .gov-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .gov-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gov-card:hover {
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .gov-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .emblem-box {
+      width: 82px;
+      height: 68px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+    }
+
+    .emblem-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .gov-dept {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.2rem;
+    }
+
+    .gov-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+
+    .gov-desc {
+      color: var(--text-body);
+      font-size: 0.94rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .tag-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .gov-pill {
+      background: var(--bg-muted);
+      border: 1px solid var(--border-light);
+      padding: 0.3rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--text-body);
+    }
+
+    /* Experience & Domains Section */
+    .domain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .domain-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 1.8rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .domain-card:hover {
+      border-color: var(--accent-azure);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .domain-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #eff6ff;
+      color: var(--primary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+
+    .domain-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.6rem;
+    }
+
+    .domain-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Capabilities & Tool Stack */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .skill-block {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .skill-block h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-block-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .tech-logo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-muted);
+      border: 1px solid var(--border-light);
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      transition: var(--transition);
+    }
+
+    .tech-badge:hover {
+      background: #ffffff;
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-1px);
+    }
+
+    .tech-badge img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    /* Education & Languages */
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 2.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .edu-item-box {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 1.2rem;
+      background: #f8fafc;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      margin-bottom: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .edu-item-box:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-item-box:hover {
+      border-color: var(--primary-blue);
+      background: #ffffff;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .uni-emblem {
+      width: 68px;
+      height: 68px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    }
+
+    .uni-emblem img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .edu-degree-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--primary-navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-university-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary-blue);
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* Representative Language Badges */
+    .lang-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-muted);
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+    }
+
+    .lang-item:hover {
+      background: #ffffff;
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-1px);
+    }
+
+    .lang-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lang-script-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .icon-en {
+      background: linear-gradient(135deg, #1e3a8a, #0284c7);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .icon-hi {
+      background: linear-gradient(135deg, #ea580c, #f59e0b);
+      color: #ffffff;
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      font-size: 1.15rem;
+    }
+
+    .icon-ur {
+      background: linear-gradient(135deg, #047857, #10b981);
+      color: #ffffff;
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.15rem;
+    }
+
+    .icon-ar {
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: #ffffff;
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.15rem;
+    }
+
+    .icon-fa {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: #ffffff;
+      font-family: 'Noto Naskh Arabic', serif;
+      font-size: 1.15rem;
+    }
+
+    .lang-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lang-name {
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--text-heading);
+      line-height: 1.2;
+    }
+
+    .lang-native-sub {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .lang-level {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--primary-blue);
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 0.22rem 0.65rem;
+      border-radius: 6px;
+    }
+
+    /* ========================================================
+       PERFECTLY RESPONSIVE FOOTER (DESKTOP & MOBILE COMPACT)
+    ======================================================== */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-light);
+      padding: 2.2rem 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand-side {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      color: var(--primary-navy);
+      text-transform: uppercase;
+    }
+
+    .footer-title span {
+      color: var(--primary-blue);
+    }
+
+    .footer-copy {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    /* Desktop Single-Line Action Row */
+    .footer-action-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: nowrap;
+    }
+
+    .footer-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 0.5rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-navy);
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .footer-btn:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .footer-btn svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--primary-blue);
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+
+    .footer-btn-linkedin {
+      background: var(--color-linkedin);
+      border-color: var(--color-linkedin);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(10, 102, 194, 0.25);
+    }
+
+    .footer-btn-linkedin svg {
+      stroke: none;
+      fill: #ffffff;
+    }
+
+    .footer-btn-linkedin:hover {
+      background: #084e96;
+      border-color: #084e96;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(10, 102, 194, 0.38);
+    }
+
+    /* MASTER RESPONSIVE BREAKPOINTS */
+    @media (max-width: 1100px) {
+      .nav-menu {
+        gap: 0.75rem;
+      }
+      .nav-link {
+        font-size: 0.8rem;
+      }
+      .hero-layout {
+        gap: 2.5rem;
+      }
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+      .footer-action-row {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        border-bottom: 1px solid var(--border-light);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 1.5rem;
+        gap: 0.75rem;
+        box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.1);
+        display: none;
+      }
+
+      .nav-menu.mobile-active {
+        display: flex;
+        animation: dropDownMenu 0.25s ease-in-out forwards;
+      }
+
+      @keyframes dropDownMenu {
+        from { opacity: 0; transform: translateY(-8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .nav-menu li a {
+        display: block;
+        padding: 0.6rem 0.8rem;
+        border-radius: 8px;
+      }
+
+      .nav-menu li a:hover {
+        background: var(--bg-muted);
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 3rem;
+      }
+
+      .portrait-wrapper {
+        order: -1;
+      }
+
+      .portrait-box {
+        max-width: 320px;
+        height: 400px;
+      }
+
+      .gov-grid, .skills-grid, .split-grid, .detail-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .domain-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-container {
+        padding: 0.5rem 1rem;
+      }
+
+      .brand-full-name {
+        font-size: 1rem;
+      }
+
+      .brand-designation {
+        font-size: 0.58rem;
+      }
+
+      .logo-emblem-svg {
+        width: 36px;
+        height: 36px;
+      }
+
+      .btn-phone span {
+        display: none;
+      }
+      
+      .btn-contact {
+        padding: 0.38rem 0.55rem;
+        font-size: 0.75rem;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .domain-grid, .metrics-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-bar {
+        gap: 1rem;
+        padding: 1.25rem;
+      }
+
+      .compact-exposure-box {
+        padding: 1.25rem 1rem;
+      }
+
+      .embedded-tabs-nav {
+        gap: 0.4rem;
+      }
+
+      .tab-pill-btn {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary, .btn-secondary {
+        text-align: center;
+      }
+
+      /* Clean Mobile Vertical Stack for Footer */
+      footer {
+        padding: 2rem 1rem 1.8rem;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+      }
+
+      .footer-brand-side {
+        text-align: center;
+      }
+
+      .footer-action-row {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0.65rem;
+      }
+
+      .footer-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.65rem 1rem;
+        font-size: 0.86rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid-pattern"></div>
+
+  <!-- Header Navigation with Custom SM Growth Logo -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="custom-brand-logo">
+        <svg class="logo-emblem-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="smBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0b1220" />
+              <stop offset="100%" stop-color="#1e3a8a" />
+            </linearGradient>
+            <linearGradient id="smGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="60%" stop-color="#e0f2fe" />
+              <stop offset="100%" stop-color="#38bdf8" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="12" fill="url(#smBg)" stroke="rgba(56, 189, 248, 0.45)" stroke-width="1.5" />
+          <text x="21" y="32" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="19" font-weight="900" fill="url(#smGrad)" text-anchor="middle" letter-spacing="-1">SM</text>
+          <path d="M31 22 L36 17 L38 19 L43 14" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M38 14 H43 V19" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <div class="brand-text-block">
+          <div class="brand-full-name">Sufyan <span>Mirza</span></div>
+          <div class="brand-designation">Lead Business &amp; Tech Analyst</div>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Dropdown Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#global-footprint" class="nav-link">Global Exposure</a></li>
+        <li><a href="#initiatives" class="nav-link">Government Projects</a></li>
+        <li><a href="#experience" class="nav-link">Domains</a></li>
+        <li><a href="#competencies" class="nav-link">Capabilities</a></li>
+        <li><a href="#credentials" class="nav-link">Education</a></li>
+      </ul>
+
+      <!-- Action Buttons & Hamburger Toggle -->
+      <div class="nav-cta-group">
+        <a href="tel:+918233638086" class="btn-contact btn-phone" title="Call Me">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+91 8233638086</span>
+        </a>
+        <a href="mailto:mirzasufyan2@gmail.com" class="btn-contact" title="Send Email">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Email
+        </a>
+        <a href="https://linkedin.com/in/sufyan-mirza01" target="_blank" rel="noopener noreferrer" class="btn-contact btn-linkedin-header" title="LinkedIn Profile">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+          <svg id="menuIcon" viewBox="0 0 24 24" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-layout">
+      <div>
+        <div class="achievement-beam-wrap">
+          <div class="achievement-inner">
+            <div class="achievement-icon-circle">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <div class="achievement-meta">
+              <span class="achievement-pill">
+                <span class="achievement-pill-dot"></span> Key Achievement
+              </span>
+              <span class="achievement-headline">Letter of Appreciation from Finance Secretary</span>
+              <span class="achievement-dept">Revenue Department, Government of Rajasthan</span>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          IT Business & Technology Analyst for <span>Global & Public Enterprises.</span>
+        </h1>
+
+        <p class="hero-lead">
+          Business and Technology Analyst with over 7 years of experience collaborating with national and international clients on government projects, enterprise solutions, e-commerce, healthcare, hospitality, and corporate domains. Demonstrates strong expertise in technology consulting, project management, requirements analysis, client relations, team coordination, software development, and agile methodologies.
+        </p>
+
+        <div class="hero-contact-chips">
+          <a href="tel:+918233638086" class="contact-chip">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +91 8233638086
+          </a>
+          <a href="mailto:mirzasufyan2@gmail.com" class="contact-chip">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            mirzasufyan2@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/sufyan-mirza01" target="_blank" rel="noopener noreferrer" class="contact-chip">
+            <svg viewBox="0 0 24 24" style="fill: var(--color-linkedin); stroke: none;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            linkedin.com/in/sufyan-mirza01
+          </a>
+          <span class="contact-chip" style="cursor: default;">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Jaipur, Rajasthan, India
+          </span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="https://linkedin.com/in/sufyan-mirza01" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Connect on LinkedIn
+          </a>
+          <a href="#initiatives" class="btn-secondary">
+            Explore Government Projects &darr;
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-wrapper">
+        <div class="portrait-box">
+          <div class="portrait-inner">
+            <img 
+              src="suit.png" 
+              alt="Sufyan Mirza - IT Business and Technology Analyst" 
+              class="portrait-img"
+            />
+            <div class="portrait-caption">
+              <div class="caption-name">Sufyan Mirza</div>
+              <div class="caption-role">Lead Business & Technology Analyst</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics Ribbon -->
+    <section class="metrics-bar">
+      <div class="metric-cell">
+        <h4>7+ Years</h4>
+        <p>Technology Consulting & Systems Analysis</p>
+      </div>
+      <div class="metric-cell">
+        <h4>International</h4>
+        <p>Global Client & Multi-Region Exposure</p>
+      </div>
+      <div class="metric-cell">
+        <h4>SDLC & Agile</h4>
+        <p>BRD, SRS, FRS, Tender RFPs & Sprint Leadership</p>
+      </div>
+      <div class="metric-cell">
+        <h4>Multi-Domain</h4>
+        <p>Govt, Enterprise, Healthcare & E-Commerce</p>
+      </div>
+    </section>
+
+    <!-- Global Client Exposure Section -->
+    <section class="global-footprint-section" id="global-footprint">
+      <div class="global-section-head">
+        <span class="global-meta-tag">// Cross-Border Architectural Delivery</span>
+        <h2 class="global-main-title">Global Client & Delivery Exposure</h2>
+        <p class="global-subtitle">
+          Collaborating across multi-cultural stakeholders, regional regulatory frameworks, and enterprise delivery standards.
+        </p>
+      </div>
+
+      <div class="compact-exposure-box">
+        <div class="embedded-tabs-nav">
+          <button class="tab-pill-btn active" data-target="detail-europe">
+            <span class="tab-emblem">EU</span> Europe Engagement
+          </button>
+          <button class="tab-pill-btn" data-target="detail-middle-east">
+            <span class="tab-emblem">ME</span> Middle East (MENA)
+          </button>
+          <button class="tab-pill-btn" data-target="detail-india">
+            <span class="tab-emblem">IN</span> India Public Governance
+          </button>
+          <button class="tab-pill-btn" data-target="detail-remote">
+            <span class="tab-emblem">GL</span> Global Remote Delivery
+          </button>
+        </div>
+
+        <!-- View 1: Europe -->
+        <div class="detail-view active" id="detail-europe">
+          <div class="detail-header-flex">
+            <h3 class="detail-title">Europe Client Delivery &amp; Architecture Scope</h3>
+            <span class="detail-scope-tag">EU Standards &amp; Corporate Domains</span>
+          </div>
+
+          <div class="detail-columns">
+            <div>
+              <p class="detail-desc">
+                Partnering with European enterprises and technical consultancies to engineer scalable business architectures, comprehensive BRD/SRS documentation, and custom software platforms adhering to stringent compliance standards.
+              </p>
+              <ul class="detail-points-list">
+                <li><span>✔</span> Complete alignment with GDPR data privacy, information security, and user consent frameworks.</li>
+                <li><span>✔</span> Elicitation and functional mapping for B2B e-commerce, corporate enterprise solutions, and hospitality tools.</li>
+                <li><span>✔</span> Direct collaboration with senior offshore PMs, solution architects, and executive European leadership.</li>
+              </ul>
+            </div>
+            <div class="detail-metrics-card">
+              <div class="detail-metrics-heading">Delivery Specializations</div>
+              <div class="detail-pill-stack">
+                <span class="detail-pill-item">GDPR Compliance</span>
+                <span class="detail-pill-item">B2B Gateways</span>
+                <span class="detail-pill-item">Hospitality Portals</span>
+                <span class="detail-pill-item">Enterprise SRS/FRS</span>
+                <span class="detail-pill-item">SLA Governance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 2: Middle East -->
+        <div class="detail-view" id="detail-middle-east">
+          <div class="detail-header-flex">
+            <h3 class="detail-title">Middle East (MENA) Client Engagement Scope</h3>
+            <span class="detail-scope-tag">GCC &amp; Regional Digital Transformation</span>
+          </div>
+
+          <div class="detail-columns">
+            <div>
+              <p class="detail-desc">
+                Consulting on high-speed commercial platforms, custom ordering systems, and localized retail workflows across key GCC markets with deep cultural and operational understanding.
+              </p>
+              <ul class="detail-points-list">
+                <li><span>✔</span> Requirements modeling for bilingual (English &amp; Arabic RTL) web platforms, apps, and administrative backends.</li>
+                <li><span>✔</span> Supply chain tracking, payment gateway orchestration, and CRM integrations for retail and healthcare verticals.</li>
+                <li><span>✔</span> Seamless stakeholder coordination bridging regional business objectives with developer delivery scrums.</li>
+              </ul>
+            </div>
+            <div class="detail-metrics-card">
+              <div class="detail-metrics-heading">Delivery Specializations</div>
+              <div class="detail-pill-stack">
+                <span class="detail-pill-item">Bilingual RTL Workflows</span>
+                <span class="detail-pill-item">E-Commerce Supply Chain</span>
+                <span class="detail-pill-item">Regional Payment Stacks</span>
+                <span class="detail-pill-item">Retail CRM Solutions</span>
+                <span class="detail-pill-item">Client Relations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 3: India -->
+        <div class="detail-view" id="detail-india">
+          <div class="detail-header-flex">
+            <h3 class="detail-title">India Public Governance &amp; Digital Stack Scope</h3>
+            <span class="detail-scope-tag">Federal &amp; State Level Impact</span>
+          </div>
+
+          <div class="detail-columns">
+            <div>
+              <p class="detail-desc">
+                Leading digital governance transformations for federal and state departments, including AgriStack digitization, Integrated Excise Management (IEMS 2.0), revenue platforms, and citizen health assurance.
+              </p>
+              <ul class="detail-points-list">
+                <li><span>✔</span> Formal letter of appreciation received from Finance Secretary, Revenue Department, Govt. of Rajasthan.</li>
+                <li><span>✔</span> Pan-state rollout of farmer and crop data digitization for Department of Agriculture &amp; Farmers Welfare.</li>
+                <li><span>✔</span> System modernization for IG Registration &amp; Stamps (E-Panjiyan) and high-value tender RFP authoring.</li>
+              </ul>
+            </div>
+            <div class="detail-metrics-card">
+              <div class="detail-metrics-heading">Delivery Specializations</div>
+              <div class="detail-pill-stack">
+                <span class="detail-pill-item">AGRI STACK Architecture</span>
+                <span class="detail-pill-item">IEMS 2.0 Revenue Systems</span>
+                <span class="detail-pill-item">E-Panjiyan Portal</span>
+                <span class="detail-pill-item">RSHAA Health Tech</span>
+                <span class="detail-pill-item">Govt Tender RFPs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 4: Remote -->
+        <div class="detail-view" id="detail-remote">
+          <div class="detail-header-flex">
+            <h3 class="detail-title">Global Distributed Delivery &amp; Agile Orchestration</h3>
+            <span class="detail-scope-tag">Multi-Timezone Remote Governance</span>
+          </div>
+
+          <div class="detail-columns">
+            <div>
+              <p class="detail-desc">
+                Managing synchronous and asynchronous project lifecycles across diverse international timezones using modern agile governance platforms, cloud toolstacks, and structured documentation pipelines.
+              </p>
+              <ul class="detail-points-list">
+                <li><span>✔</span> Active sprint planning, backlog refinement, user story writing, and milestone tracking in Jira, Trello, and Basecamp.</li>
+                <li><span>✔</span> Collaborative wireframing and prototyping using Figma, Canva, and Microsoft Visio to validate client concepts early.</li>
+                <li><span>✔</span> Complete technical lifecycle stewardship from lead qualification to final deployment and web server infrastructure.</li>
+              </ul>
+            </div>
+            <div class="detail-metrics-card">
+              <div class="detail-metrics-heading">Delivery Specializations</div>
+              <div class="detail-pill-stack">
+                <span class="detail-pill-item">Agile / Scrum Sprints</span>
+                <span class="detail-pill-item">Jira &amp; Trello Workspaces</span>
+                <span class="detail-pill-item">Figma Interactive Mockups</span>
+                <span class="detail-pill-item">Timezone Alignment</span>
+                <span class="detail-pill-item">cPanel &amp; Cloud Hosting</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Versatile Roles Executed -->
+    <div class="roles-carousel">
+      <span class="roles-title">// Proven Record of Performing Diverse Roles</span>
+      <div class="roles-badges">
+        <span class="role-badge">Technology Consultant</span>
+        <span class="role-badge">Business Analyst</span>
+        <span class="role-badge">Documentation Developer</span>
+        <span class="role-badge">IT Consultant</span>
+        <span class="role-badge">Project Coordinator</span>
+        <span class="role-badge">cPanel Specialist</span>
+        <span class="role-badge">Website Performance Optimizer</span>
+      </div>
+    </div>
+
+    <!-- 1. Government & Public Sector Projects -->
+    <section id="initiatives">
+      <div class="section-header">
+        <span class="section-tag">// Digital Governance Footprint</span>
+        <h2 class="section-title">Public Sector & Government Deployments</h2>
+      </div>
+
+      <div class="gov-grid">
+        <!-- Agri Stack -->
+        <div class="gov-card">
+          <div>
+            <div class="gov-top">
+              <div class="emblem-box">
+                <img 
+                  src="Agristack.png"[cite: 1]
+                  alt="AgriStack Official Logo" 
+                />
+              </div>
+              <div>
+                <div class="gov-dept">Government of India &amp; Rajasthan</div>
+                <h3 class="gov-title">AGRI STACK Architecture</h3>
+              </div>
+            </div>
+            <p class="gov-desc">
+              Spearheaded technical documentation for farmer and crop data digitization for the Department of Agriculture & Farmers Welfare. Delivered end-to-end operational guidance and application support ensuring nationwide platform adoption.
+            </p>
+          </div>
+          <div class="tag-cluster">
+            <span class="gov-pill">Dept of Agriculture &amp; Farmers Welfare</span>
+            <span class="gov-pill">Crop &amp; Farmer Data Digitization</span>
+            <span class="gov-pill">Agri-Tech Workflows</span>
+          </div>
+        </div>
+
+        <!-- IEMS 2.0 -->
+        <div class="gov-card">
+          <div>
+            <div class="gov-top">
+              <div class="emblem-box">
+                <img 
+                  src="Excise.jpg"[cite: 2]
+                  alt="Excise Department Government of Rajasthan Logo" 
+                />
+              </div>
+              <div>
+                <div class="gov-dept">Excise Department, Govt. of Rajasthan</div>
+                <h3 class="gov-title">Integrated Excise Management (IEMS 2.0)</h3>
+              </div>
+            </div>
+            <p class="gov-desc">
+              Supported the complete upgrade and multi-service integration of IEMS and IEMS 2.0. Authored comprehensive SOPs, technical documentation, performance analytics reports, and UI mockups to streamline revenue governance.
+            </p>
+          </div>
+          <div class="tag-cluster">
+            <span class="gov-pill">IEMS 2.0 Platform</span>
+            <span class="gov-pill">Standard Operating Procedures (SOPs)</span>
+            <span class="gov-pill">Revenue Systems</span>
+          </div>
+        </div>
+
+        <!-- E-Panjiyan -->
+        <div class="gov-card">
+          <div>
+            <div class="gov-top">
+              <div class="emblem-box">
+                <img 
+                  src="IRGS.png"[cite: 3]
+                  alt="Department of Registration & Stamps Government of Rajasthan Logo" 
+                />
+              </div>
+              <div>
+                <div class="gov-dept">Inspector General of Registration &amp; Stamps</div>
+                <h3 class="gov-title">E-Panjiyan Portal &amp; E-Mitra RFP</h3>
+              </div>
+            </div>
+            <p class="gov-desc">
+              Evaluated and optimized citizen workflows for the E-Panjiyan portal. Authored formal Request for Proposals (RFP) for E-Mitra procurement and operational stationery requirements across administrative tiers.
+            </p>
+          </div>
+          <div class="tag-cluster">
+            <span class="gov-pill">E-Panjiyan Portal</span>
+            <span class="gov-pill">E-Mitra Integration</span>
+            <span class="gov-pill">RFP Authoring</span>
+          </div>
+        </div>
+
+        <!-- RSHAA -->
+        <div class="gov-card">
+          <div>
+            <div class="gov-top">
+              <div class="emblem-box">
+                <img 
+                  src="RGHS.jpg"[cite: 4]
+                  alt="Rajasthan Government Health Scheme Logo" 
+                />
+              </div>
+              <div>
+                <div class="gov-dept">State Health Assurance Agency</div>
+                <h3 class="gov-title">RSHAA Public Healthcare System</h3>
+              </div>
+            </div>
+            <p class="gov-desc">
+              Delivered technical support and functional documentation for the Rajasthan State Health Assurance Agency portal, coordinating bug resolutions, system enhancement pipelines, and smooth citizen healthcare access.
+            </p>
+          </div>
+          <div class="tag-cluster">
+            <span class="gov-pill">Public Health Platform</span>
+            <span class="gov-pill">Bug Resolution Specs</span>
+            <span class="gov-pill">Enhancement Releases</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Domain & Industry Experience -->
+    <section id="experience">
+      <div class="section-header">
+        <span class="section-tag">// Broad Domain Acumen</span>
+        <h2 class="section-title">Industry & Domain Expertise</h2>
+      </div>
+
+      <div class="domain-grid">
+        <div class="domain-card">
+          <div class="domain-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Technology Consulting</h3>
+          <p>Advising enterprise and government leadership on digital modernization, legacy system upgrades, and cloud operational feasibility.</p>
+        </div>
+
+        <div class="domain-card">
+          <div class="domain-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Healthcare & Hospital Systems</h3>
+          <p>Delivering requirement specifications, clinical workflow mapping, and patient assurance systems for medical institutions.</p>
+        </div>
+
+        <div class="domain-card">
+          <div class="domain-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <h3>E-Commerce & Supply Chain</h3>
+          <p>Designing custom ordering portals, CRM integrations, and fulfillment pipelines for product distribution and retail platforms.</p>
+        </div>
+
+        <div class="domain-card">
+          <div class="domain-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+          </div>
+          <h3>Hospitality & Corporate</h3>
+          <p>Architecting customized booking engines, guest services portals, and automated back-office corporate enterprise tools.</p>
+        </div>
+
+        <div class="domain-card">
+          <div class="domain-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Tender RFPs & Pre-Sales</h3>
+          <p>Drafting formal bid responses for international & domestic government tenders, feasibility studies, and cost-benefit breakdowns.</p>
+        </div>
+
+        <div class="domain-card">
+          <div class="domain-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3>Web Infrastructure & Performance</h3>
+          <p>cPanel administration, server configuration, DNS routing, website caching, and web performance optimization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Capabilities & Tool Stack -->
+    <section id="competencies">
+      <div class="section-header">
+        <span class="section-tag">// Technical Ecosystem & Methodology</span>
+        <h2 class="section-title">Core Competencies & Hands-on Technologies</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-block">
+          <div>
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Analysis &amp; Documentation Frameworks
+            </h3>
+            <p class="skill-block-desc">
+              End-to-end SDLC requirement engineering, formal government tender responses, and business process modeling.
+            </p>
+          </div>
+          <div class="tech-logo-row">
+            <span class="tech-badge">BRD &amp; FRD Authoring</span>
+            <span class="tech-badge">SRS &amp; BRS Creation</span>
+            <span class="tech-badge">RFP &amp; Tender Writing</span>
+            <span class="tech-badge">Process Flowcharts (BPMN)</span>
+            <span class="tech-badge">Agile &amp; Scrum Methodologies</span>
+            <span class="tech-badge">GAP &amp; Feasibility Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <div>
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              Technical Platforms &amp; Industry Tools
+            </h3>
+            <p class="skill-block-desc">
+              Hands-on proficiency in architecting workflows, wireframing, project tracking, and web infrastructure.
+            </p>
+          </div>
+          <div class="tech-logo-row">
+            <span class="tech-badge">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira Logo">
+              Jira Software
+            </span>
+            <span class="tech-badge">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello Logo">
+              Trello
+            </span>
+            <span class="tech-badge">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma Logo">
+              Figma
+            </span>
+            <span class="tech-badge">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva Logo">
+              Canva
+            </span>
+            <span class="tech-badge">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress Logo">
+              WordPress
+            </span>
+            <span class="tech-badge">
+              <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify Logo">
+              Shopify
+            </span>
+            <span class="tech-badge">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
+              Visio &amp; Office Suite
+            </span>
+            <span class="tech-badge">
+              <img 
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/cpanel.svg" 
+                alt="cPanel Logo"
+                style="filter: invert(47%) sepia(87%) saturate(2250%) hue-rotate(352deg) brightness(98%) contrast(102%);"
+                onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23FF6C2C\'><path d=\'M10.74 8.78c-.28-.56-.7-.84-1.26-.84-.7 0-1.12.42-1.26 1.26v5.6c.14.84.56 1.26 1.26 1.26.56 0 .98-.28 1.26-.84l2.1 1.4c-.7 1.12-1.82 1.82-3.36 1.82-2.1 0-3.5-1.4-3.5-3.64v-5.6c0-2.24 1.4-3.64 3.5-3.64 1.54 0 2.66.7 3.36 1.82l-2.1 1.4zm5.74 3.78v-4.9h2.38v4.9c0 1.26.56 1.82 1.54 1.82.98 0 1.54-.56 1.54-1.82v-4.9h2.38v4.9c0 2.66-1.54 4.06-3.92 4.06-2.38 0-3.92-1.4-3.92-4.06z\'/></svg>';"
+              />
+              cPanel Management
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Education & Languages -->
+    <section class="split-grid" id="credentials">
+      <div class="info-card">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Academic Qualifications
+        </h3>
+        
+        <div class="edu-item-box">
+          <div class="uni-emblem">
+            <img 
+              src="RTU Logo.jpg" 
+              alt="Rajasthan Technical University (RTU) Logo" 
+            />
+          </div>
+          <div>
+            <div class="edu-degree-title">Master of Computer Application (M.C.A.)</div>
+            <div class="edu-university-name">Rajasthan Technical University (RTU), Jaipur</div>
+            <div class="edu-meta">Batch: 2013 - 2016</div>
+          </div>
+        </div>
+
+        <div class="edu-item-box">
+          <div class="uni-emblem">
+            <img 
+              src="RU Logo.png" 
+              alt="University of Rajasthan (RU) Logo" 
+            />
+          </div>
+          <div>
+            <div class="edu-degree-title">Bachelor of Computer Application (B.C.A.)</div>
+            <div class="edu-university-name">Rajasthan University (RU), Jaipur</div>
+            <div class="edu-meta">Batch: 2010 - 2013</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Languages Known
+        </h3>
+
+        <div class="lang-list">
+          <div class="lang-item">
+            <div class="lang-left">
+              <div class="lang-script-icon icon-en">EN</div>
+              <div class="lang-details">
+                <span class="lang-name">English</span>
+                <span class="lang-native-sub">Global Professional</span>
+              </div>
+            </div>
+            <span class="lang-level">Fluent</span>
+          </div>
+
+          <div class="lang-item">
+            <div class="lang-left">
+              <div class="lang-script-icon icon-hi">अ</div>
+              <div class="lang-details">
+                <span class="lang-name">Hindi</span>
+                <span class="lang-native-sub">हिन्दी (Devanagari)</span>
+              </div>
+            </div>
+            <span class="lang-level">Native</span>
+          </div>
+
+          <div class="lang-item">
+            <div class="lang-left">
+              <div class="lang-script-icon icon-ur">اردو</div>
+              <div class="lang-details">
+                <span class="lang-name">Urdu</span>
+                <span class="lang-native-sub">اردو (Nasta'liq)</span>
+              </div>
+            </div>
+            <span class="lang-level">Native</span>
+          </div>
+
+          <div class="lang-item">
+            <div class="lang-left">
+              <div class="lang-script-icon icon-ar">ع</div>
+              <div class="lang-details">
+                <span class="lang-name">Arabic</span>
+                <span class="lang-native-sub">العربية (Fusha &amp; Modern)</span>
+              </div>
+            </div>
+            <span class="lang-level">Intermediate</span>
+          </div>
+
+          <div class="lang-item">
+            <div class="lang-left">
+              <div class="lang-script-icon icon-fa">ف</div>
+              <div class="lang-details">
+                <span class="lang-name">Farsi</span>
+                <span class="lang-native-sub">فارسی (Persian Script)</span>
+              </div>
+            </div>
+            <span class="lang-level">Read / Write only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Single-Line Desktop & Clean-Stacked Mobile Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand-side">
+        <div class="footer-title">
+          Sufyan <span>Mirza</span>
+        </div>
+        <p class="footer-copy">
+          Lead IT Business &amp; Technology Analyst • Public Sector Digital Governance &amp; Global Enterprise Solutions
+        </p>
+      </div>
+
+      <!-- Action Row: Desktop Horizontal & Mobile Card Stack -->
+      <div class="footer-action-row">
+        <a href="tel:+918233638086" class="footer-btn" title="Call directly">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +91 8233638086
+        </a>
+        <a href="mailto:mirzasufyan2@gmail.com" class="footer-btn" title="Send email">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          mirzasufyan2@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/sufyan-mirza01" target="_blank" rel="noopener noreferrer" class="footer-btn footer-btn-linkedin" title="LinkedIn Profile">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn &nearr;
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('mobile-active');
+      if (isOpen) {
+        menuIcon.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+      } else {
+        menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+      }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-active');
+        menuIcon.innerHTML = '<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+      });
+    });
+
+    const tabPillBtns = document.querySelectorAll('.tab-pill-btn');
+    const detailViews = document.querySelectorAll('.detail-view');
+
+    tabPillBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+
+        tabPillBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        detailViews.forEach(view => {
+          view.classList.remove('active');
+          if (view.id === targetId) {
+            view.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
